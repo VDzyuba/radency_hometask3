@@ -24,6 +24,7 @@ final contacts = [
     'images': 'john-agnew.jpg'
   },
   {
+    'firstName': '',
     'lastName': 'Mikelangelo',
     'company': 'Sculptor, painter, architect',
     'images': 'michelangelo.jpg'
@@ -35,13 +36,15 @@ final contacts = [
     'images': 'lionel-messi.jpg'
   },
   {
-    'firstName': 'Joshua', 
-    'lastName': 'Allison', 
+    'firstName': 'Joshua',
+    'lastName': 'Allison',
     'company': 'Hooli Inc.',
-    'images': 'joshua-allison.png'},
+    'images': 'joshua-allison.png'
+  },
   {
-    'firstName': 'Sam', 
-    'lastName': 'Barnard', 
+    'firstName': 'Sam',
+    'lastName': 'Barnard',
     'company': 'UC Berkeley',
-    'images': 'sam-barnard.jpg'}
+    'images': 'sam-barnard.jpg'
+  }
 ];
