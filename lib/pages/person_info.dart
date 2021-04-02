@@ -121,16 +121,26 @@ class PersonInfo extends StatelessWidget {
                       ),
                     ),
                     TextFormField(
+                      decoration: InputDecoration(
+                          counterText: '',
+                          prefixIcon: Text(
+                            "+38",
+                            style: TextStyle(fontSize: 16.0),
+                          ),
+                          prefixIconConstraints:
+                              BoxConstraints(minWidth: 0, minHeight: 0)),
+                      maxLength: 10,
                       keyboardType: TextInputType.number,
-                      // inputFormatters: <TextInputFormatter>[
-                      //     FilteringTextInputFormatter.singleLineFormatter
-                      //  ],
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
                       initialValue: contact[index]['phone'],
                       onSaved: (text) {
                         contact[index]['phone'] = text;
                       },
-                      validator: (text) =>
-                          text.isEmpty ? 'Enter phone number' : null,
+                      validator: (text) => text.isEmpty || text.length < 10
+                          ? 'Enter valid phone number'
+                          : null,
                     ),
                     SizedBox(
                       height: 20.0,
@@ -147,7 +157,6 @@ class PersonInfo extends StatelessWidget {
                       onSaved: (text) {
                         contacts[index]['company'] = text;
                       },
-                      //validator: (text) => text!.isEmpty ? 'Введіть ім`я' : null,
                     ),
                     SizedBox(
                       height: 20.0,
@@ -166,7 +175,6 @@ class PersonInfo extends StatelessWidget {
                       onSaved: (text) {
                         contact[index]['bio'] = text;
                       },
-                      //validator: (text) => text!.isEmpty ? 'Введіть ім`я' : null,
                     ),
                   ],
                 ),

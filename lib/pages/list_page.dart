@@ -5,22 +5,24 @@ import 'package:radency_hometask/models/save_provider.dart';
 import 'package:radency_hometask/models/sort_by.dart';
 import 'package:provider/provider.dart';
 
+
 class ListPage extends StatefulWidget {
   @override
   _ListPageState createState() => _ListPageState();
 }
 
 class _ListPageState extends State<ListPage> {
-  void createLists() {
+  void isFavoriteLists() {
     for (var person in contacts) {
       person['isFavorite'] = 'false';
     }
   }
 
+
   @override
   void initState() {
     sortByLastName();
-    createLists();
+    isFavoriteLists();
     super.initState();
   }
 
