@@ -74,8 +74,6 @@ class PersonInfo extends StatelessWidget {
                                 onSaved: (text) {
                                   contacts[index]['firstName'] = text;
                                 },
-                                validator: (text) =>
-                                    text.isEmpty ? 'Enter First name' : null,
                               ),
                             ],
                           ),
